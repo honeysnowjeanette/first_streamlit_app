@@ -1,7 +1,6 @@
 import streamlit
 streamlit.title("My Mom's New Healthy Diner")
 streamlit.header('Breakfast Favorites')
-
 streamlit.text('🥣Omega 3 & Blueberry Oatmeal')
 streamlit.text('🥗Kale, Spinach & Rocket Smoothie')
 streamlit.text('🐔Hard-Boiled Range-Free Egg')
@@ -17,6 +16,5 @@ streamlit.dataframe(my_fruit_list)
 #Let's put a pick list here so they can pick the fruit they want to include
 fruits_selected = streamlit.multiselect("Pick some fruits:",list(my_fruit_list.index),['Avacado','Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
-
 #display the table on the page
 streamlit.dataframe(fruits_to_show)
